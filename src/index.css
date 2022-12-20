@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer base {
+  body {
+    @apply h-screen w-screen flex justify-center items-center bg-[#ECECEE] overflow-hidden;
+  }
+
+  h2 {
+    @apply my-4 mx-0;
+  }
+
+  form {
+    @apply flex flex-col gap-6;
+  }
+
+  form div {
+    @apply flex flex-col gap-2;
+  }
+
+  input {
+    @apply p-2 border border-gray-400 rounded-md text-xl;
+  }
+
+  button {
+    @apply bg-[#5062FF] text-white p-4 text-lg uppercase cursor-pointer rounded-[0.3rem];
+  }
+
+  span a {
+    @apply text-[#5062FF] text-xl font-semibold;
+  }
+}
