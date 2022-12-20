@@ -24,7 +24,7 @@
   }
 
   button {
-    @apply bg-[#5062FF] text-white p-4 text-lg uppercase cursor-pointer rounded-[0.3rem];
+    @apply bg-[#5062FF] text-white p-4 text-lg uppercase cursor-pointer rounded-[0.3rem] w-fit;
   }
 
   span a {

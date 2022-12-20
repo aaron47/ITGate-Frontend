@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { setTokens } from '../features/UserSlice';
 import { useLogoutMutation, useRefreshTokenMutation } from '../services/auth';
@@ -8,7 +8,6 @@ import {
   refreshLocalStorageTokens,
   toastOptions,
   Tokens,
-  UserDocument,
 } from '../utils/utility-type-exports';
 
 const Secret = () => {
@@ -72,12 +71,15 @@ const Secret = () => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center">
       <p className="text-4xl text-pink-600 font-bold">
         Welcome {user.username}!
       </p>
-      <button onClick={handleRefreshToken}>Refresh your token!</button>
-      <button onClick={handleLogout}>Logout</button>
+      <div className="flex space-x-5">
+        <button onClick={handleRefreshToken}>Refresh your token!</button>
+        <button onClick={handleLogout}>Logout</button>
+      </div>
+      <ToastContainer />
     </div>
   );
 };

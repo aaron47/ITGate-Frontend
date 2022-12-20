@@ -53,11 +53,13 @@ const Login = () => {
 
   return (
     <div className="bg-white py-4 px-16 pb-8 rounded-[0.5rem] border-t-[#5062FF]">
-      <h2>Login</h2>
+      <h2 className="text-[#5062FF] text-3xl font-bold">Login</h2>
 
       <form onSubmit={(e) => handleSubmit(e)}>
         <div>
-          <label htmlFor="username">Username</label>
+          <label className="text-[#5062FF]" htmlFor="username">
+            Username
+          </label>
           <input
             type="text"
             name="username"
@@ -67,7 +69,9 @@ const Login = () => {
         </div>
 
         <div>
-          <label htmlFor="password">Password</label>
+          <label className="text-[#5062FF]" htmlFor="password">
+            Password
+          </label>
           <input
             type="password"
             name="password"

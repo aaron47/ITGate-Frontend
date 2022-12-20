@@ -1,9 +1,8 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useAppDispatch, useAppSelector } from '../app/hooks';
+import { useAppDispatch } from '../app/hooks';
 import { setUser } from '../features/UserSlice';
 import { useLoginMutation, useSignUpMutation } from '../services/auth';
 import {
@@ -55,11 +54,13 @@ const SignUp = () => {
 
   return (
     <div className="bg-white py-4 px-16 pb-8 rounded-[0.5rem] border-t-[#5062FF]">
-      <h2>Sign Up</h2>
+      <h2 className="text-[#5062FF] text-3xl font-bold">Sign Up</h2>
 
       <form onSubmit={(e) => handleSubmit(e)}>
         <div>
-          <label htmlFor="username">Username</label>
+          <label className="text-[#5062FF]" htmlFor="username">
+            Username
+          </label>
           <input
             type="text"
             name="username"
@@ -69,7 +70,9 @@ const SignUp = () => {
         </div>
 
         <div>
-          <label htmlFor="password">Password</label>
+          <label className="text-[#5062FF]" htmlFor="password">
+            Password
+          </label>
           <input
             type="password"
             name="password"
