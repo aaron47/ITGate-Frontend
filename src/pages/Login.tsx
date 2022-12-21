@@ -47,7 +47,6 @@ const Login = () => {
         ...data.user,
       })
     );
-    window.location.reload();
     navigate('/');
   };
 

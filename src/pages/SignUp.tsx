@@ -39,17 +39,15 @@ const SignUp = () => {
       .then(async (res) => {
         await login(values);
         toast.success('Logged in sucessfully', toastOptions);
-        navigate('/');
+        navigate('/login');
         return res;
       })
       .catch((err: any) => {
         toast.error(err.data.message, toastOptions);
       })) as UserDocument;
 
-    refreshLocalStorageTokens(data);
+    // refreshLocalStorageTokens(data);
     dispatch(setUser({ ...data.user }));
-    window.location.reload();
-    navigate('/');
   };
 
   return (
